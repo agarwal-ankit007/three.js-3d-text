@@ -14,11 +14,11 @@ textures
 
 
 const textureLoader = new THREE.TextureLoader()
-//const matcapTexture = textureLoader.load(matImage)
+const matcapTexture = textureLoader.load('./8.png')
 
 
 //fonts
-const textMaterial = new THREE.MeshNormalMaterial()
+const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 const fontLoader = new THREE.FontLoader()
 fontLoader.load(
     './fonts/helvetiker_regular.typeface.json',
