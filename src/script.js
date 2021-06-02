@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 //import typefaceFont from 'three/examples/fonts/helvetiker_regular.typeface.json'
-import matImage from './8.png'
+// import matImage from './8.png'
 
 
 /*
@@ -14,11 +14,11 @@ textures
 
 
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load(matImage)
+//const matcapTexture = textureLoader.load(matImage)
 
 
 //fonts
-const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
+const textMaterial = new THREE.MeshNormalMaterial()
 const fontLoader = new THREE.FontLoader()
 fontLoader.load(
     '/fonts/helvetiker_regular.typeface.json',
@@ -106,7 +106,7 @@ fontLoader.load(
 
         // console.time('donuts')
         const donutGeometry = new THREE.TorusBufferGeometry(0.3, 0.2, 20, 45)
-        const donutMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
+        const donutMaterial = new THREE.MeshNormalMaterial()
         for (let i = 0; i < 100; i++) {
 
             const donut = new THREE.Mesh(donutGeometry, donutMaterial)
@@ -128,7 +128,7 @@ fontLoader.load(
 
         //cubes
         const cubeGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5)
-        const cubeMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
+        const cubeMaterial = new THREE.MeshNormalMaterial()
         for (let i = 0; i < 50; i++) {
 
             const cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
