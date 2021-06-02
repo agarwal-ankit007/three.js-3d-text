@@ -21,7 +21,7 @@ const textureLoader = new THREE.TextureLoader()
 const textMaterial = new THREE.MeshNormalMaterial()
 const fontLoader = new THREE.FontLoader()
 fontLoader.load(
-    '/fonts/helvetiker_regular.typeface.json',
+    './fonts/helvetiker_regular.typeface.json',
     (font) => {
         // console.log('font loaded')
         const textGeometry = new THREE.TextBufferGeometry(
